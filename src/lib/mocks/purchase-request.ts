@@ -4,6 +4,7 @@ export type PRStatus =
   | "Waiting Budget Confirmation"
   | "Waiting Review"
   | "Revision Required"
+  | "Need Revision"
   | "Waiting Approval"
   | "Approved"
   | "Rejected"

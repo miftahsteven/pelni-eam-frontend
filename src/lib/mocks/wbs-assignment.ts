@@ -1,3 +1,5 @@
+export type WBSMasterStatus = "Active" | "Inactive";
+
 export interface WBSMaster {
   id: string;
   code: string;
@@ -5,8 +7,10 @@ export interface WBSMaster {
   parentPackage: string;
   vesselScope: string;
   budgetOwner: string;
-  status: "Active" | "Inactive";
+  status: WBSMasterStatus;
 }
+
+export type WBSAssignmentStatus = "Waiting Assignment" | "Partially Assigned" | "Fully Assigned" | "Submitted" | "Approved" | "Assignment Approved" | "Ready for PO" | "Waiting Assignment Review";
 
 export interface WBSAssignmentPR {
   id: string;
@@ -17,7 +21,7 @@ export interface WBSAssignmentPR {
   planningRef: string;
   totalItems: number;
   totalEstimate: number;
-  assignmentStatus: "Waiting Assignment" | "Partially Assigned" | "Fully Assigned" | "Submitted" | "Approved" | "Ready for PO";
+  assignmentStatus: WBSAssignmentStatus;
   priority: "HIGH" | "MEDIUM" | "LOW";
 }
 

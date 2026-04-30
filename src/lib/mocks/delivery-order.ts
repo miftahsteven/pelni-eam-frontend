@@ -1,5 +1,7 @@
 import { PurchaseOrder, POItem, dummyPOs, poItems } from "./purchase-order";
 
+export type DeliveryOrderStatus = "Draft" | "Waiting Arrival" | "Arrived" | "Under Verification" | "Verified" | "Partial Accepted" | "Rejected" | "Closed";
+
 export interface DeliveryOrder {
   id: string;
   doNo: string;
@@ -18,11 +20,13 @@ export interface DeliveryOrder {
   driverName: string;
   receivingLocation: string;
   receiverPIC: string;
-  status: "Draft" | "Waiting Arrival" | "Arrived" | "Under Verification" | "Verified" | "Partial Accepted" | "Rejected" | "Closed";
+  status: DeliveryOrderStatus;
   discrepancyFlag: boolean;
   notes: string;
   createdBy: string;
 }
+
+export type DOItemStatus = "Open" | "Delivered" | "Partially Accepted" | "Accepted" | "Short Delivered" | "Short Delivery" | "Damaged" | "Rejected" | "Ready for GR" | "Ready for Service Confirmation";
 
 export interface DOItem {
   id: string;
@@ -40,7 +44,7 @@ export interface DOItem {
   qtyRejected: number;
   qtyRemaining: number;
   condition: "Good" | "Damaged" | "Wrong Item";
-  status: "Open" | "Delivered" | "Partially Accepted" | "Accepted" | "Damaged" | "Rejected" | "Ready for GR";
+  status: DOItemStatus;
   remarks: string;
 }
 

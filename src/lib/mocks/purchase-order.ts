@@ -9,6 +9,8 @@ export interface Vendor {
   rating: number;
 }
 
+export type PurchaseOrderStatus = "Draft" | "Waiting Approval" | "Waiting PO Approval" | "Approved" | "Released" | "Sent to Vendor" | "Partially Fulfilled" | "Fully Fulfilled" | "Closed" | "Rejected";
+
 export interface PurchaseOrder {
   id: string;
   poNo: string;
@@ -20,12 +22,14 @@ export interface PurchaseOrder {
   paymentTerm: string;
   deliveryTerm: string;
   receivingLocation: string;
-  status: "Draft" | "Waiting Approval" | "Approved" | "Released" | "Sent to Vendor" | "Partially Fulfilled" | "Fully Fulfilled" | "Closed" | "Rejected";
+  status: PurchaseOrderStatus;
   prReference: string;
   wbsReference: string;
   vessel: string;
   createdBy: string;
 }
+
+export type POItemStatus = "Open" | "Ordered" | "Partially Delivered" | "Delivered" | "Closed";
 
 export interface POItem {
   id: string;
@@ -43,7 +47,7 @@ export interface POItem {
   taxCode: string;
   deliveryDate: string;
   subtotal: number;
-  status: "Open" | "Ordered" | "Partially Delivered" | "Delivered" | "Closed";
+  status: POItemStatus;
 }
 
 export const vendors: Vendor[] = [
