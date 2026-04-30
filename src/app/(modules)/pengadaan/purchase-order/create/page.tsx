@@ -96,7 +96,7 @@ export default function CreatePurchaseOrderPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label className="text-xs font-bold text-slate-500 uppercase">Vendor</Label>
-                  <Select onValueChange={setSelectedVendor}>
+                  <Select value={selectedVendor} onValueChange={(val) => setSelectedVendor(val || "")}>
                     <SelectTrigger className="bg-white border-slate-200">
                       <SelectValue placeholder="Select a vendor..." />
                     </SelectTrigger>
