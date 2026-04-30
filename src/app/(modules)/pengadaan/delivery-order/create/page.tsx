@@ -96,7 +96,7 @@ export default function CreateDeliveryOrderPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Select Released Purchase Order</Label>
-                  <Select onValueChange={setSelectedPO}>
+                  <Select value={selectedPO} onValueChange={(val) => setSelectedPO(val || "")}>
                     <SelectTrigger className="bg-white border-slate-200 h-10 font-bold text-slate-700">
                       <SelectValue placeholder="Choose a PO..." />
                     </SelectTrigger>
