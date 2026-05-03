@@ -19,7 +19,13 @@ import {
   ChevronUp,
   ClipboardCheck,
   ClipboardPlus,
-  ShoppingCart as PRIcon
+  ShoppingCart as PRIcon,
+  PackageCheck,
+  Truck,
+  Repeat,
+  Trash,
+  CreditCard,
+  TrendingUp
 } from "lucide-react"
 
 import {
@@ -69,17 +75,17 @@ const items = [
     icon: ClipboardList,
     items: [
       {
-        title: "PLAN & DESAIN",
+        title: "Plan & Desain",
         url: "/perencanaan",
         icon: FileText,
       },
       {
-        title: "CREATE BoQ",
+        title: "Create BoQ",
         url: "/perencanaan/boq",
         icon: FileCheck,
       },
       {
-        title: "PURCHASE REQUEST",
+        title: "Purchase Request",
         url: "/perencanaan/pr",
         icon: PRIcon,
       },
@@ -127,25 +133,88 @@ const items = [
       },
       {
         title: "Asset Registration",
-        url: "/pemasangan/installasi/asset-registration",
+        url: "/pemasangan/assetregistration",
         icon: Wrench,
       }
     ]
   },
   {
     title: "Pemeliharaan",
-    url: "/pemeliharaan",
     icon: Wrench,
+    items: [
+      {
+        title: "Maintenance",
+        url: "/pemeliharaan/maintenance",
+        icon: FileText,
+      },
+      {
+        title: "Stock Opname",
+        url: "/pemeliharaan/stock-opname",
+        icon: PackageCheck,
+      },
+      {
+        title: "Asset Tracking",
+        url: "/pemeliharaan/asset-tracking",
+        icon: MapPin,
+      }
+    ]
   },
   {
     title: "Penghapusan",
-    url: "/penghapusan",
     icon: Trash2,
+    items: [
+      {
+        title: "Movement",
+        url: "/penghapusan/movement",
+        icon: Truck,
+      },
+      {
+        title: "Replacement",
+        url: "/penghapusan/replacement",
+        icon: Repeat,
+      },
+      {
+        title: "Dismantle / Disposal",
+        url: "/penghapusan/disposal",
+        icon: Trash,
+      }
+    ]
   },
   {
     title: "Invoices",
-    url: "/invoices",
     icon: FileText,
+    items: [
+      {
+        title: "Dashboard",
+        url: "/invoices",
+        icon: LayoutDashboard,
+      },
+      {
+        title: "Vendor Invoice",
+        url: "/invoices/list",
+        icon: FileText,
+      },
+      {
+        title: "Invoice Matching",
+        url: "/invoices/matching",
+        icon: FileCheck,
+      },
+      {
+        title: "Approval Queue",
+        url: "/invoices/approval",
+        icon: ClipboardCheck,
+      },
+      {
+        title: "Payment Monitoring",
+        url: "/invoices/payments",
+        icon: CreditCard,
+      },
+      {
+        title: "Cost Allocation",
+        url: "/invoices/allocation",
+        icon: TrendingUp,
+      },
+    ]
   },
   {
     title: "Master Data",
