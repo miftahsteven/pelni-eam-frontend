@@ -59,17 +59,17 @@ const items = [
     url: "/dashboard",
     icon: LayoutDashboard,
   },
-  {
-    title: "Asset Management",
-    icon: Anchor,
-    items: [
-      {
-        title: "Asset Inventory",
-        url: "/asset",
-        icon: ClipboardList,
-      },
-    ],
-  },
+  // {
+  //   title: "Asset Management",
+  //   icon: Anchor,
+  //   items: [
+  //     {
+  //       title: "Asset Inventory",
+  //       url: "/asset",
+  //       icon: ClipboardList,
+  //     },
+  //   ],
+  // },
   {
     title: "Perencanaan",
     icon: ClipboardList,
