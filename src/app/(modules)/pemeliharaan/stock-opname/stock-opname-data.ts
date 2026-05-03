@@ -10,6 +10,8 @@ export interface DummyAsset {
   notes: string;
 }
 
+export type StockOpnameStatus = "Draft" | "Assigned" | "In Progress" | "Review" | "Approved" | "Closed" | "Revision Required";
+
 export interface DummyStockOpname {
   id: string;
   period: string;
@@ -18,7 +20,7 @@ export interface DummyStockOpname {
   totalAsset: number;
   checked: number;
   variance: number;
-  status: string;
+  status: StockOpnameStatus;
   officer: string;
   supervisor: string;
 }

@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/eam-radio-group";
 import { 
   Save, 
   Send, 
@@ -83,7 +83,7 @@ export default function CreateReplacementPage() {
               
               <div className="border-t border-slate-100 pt-6">
                 <Label className="text-xs font-bold text-slate-700 mb-2 block">Select Old Asset <span className="text-red-500">*</span></Label>
-                <Select value={selectedOldAssetCode} onValueChange={setSelectedOldAssetCode}>
+                <Select value={selectedOldAssetCode} onValueChange={(val) => setSelectedOldAssetCode(val || "")}>
                   <SelectTrigger className={cn("border-slate-200 h-10", !selectedOldAssetCode && "text-slate-400")}>
                     <SelectValue placeholder="Select asset to be replaced..." />
                   </SelectTrigger>
@@ -212,7 +212,7 @@ export default function CreateReplacementPage() {
                      <Badge className="absolute -top-2.5 left-4 bg-blue-600 text-[10px] uppercase font-bold">Target Asset</Badge>
                      <div className="space-y-2">
                         <Label className="text-xs font-bold text-slate-700">Select Available Asset <span className="text-red-500">*</span></Label>
-                        <Select value={selectedNewAssetCode} onValueChange={setSelectedNewAssetCode}>
+                        <Select value={selectedNewAssetCode} onValueChange={(val) => setSelectedNewAssetCode(val || "")}>
                            <SelectTrigger className="bg-white border-blue-200">
                               <SelectValue placeholder="Search available stock..." />
                            </SelectTrigger>

@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/components/ui/eam-checkbox";
 import { Badge } from "@/components/ui/badge";
 import { 
   Save, 
@@ -88,7 +88,7 @@ export default function CreateWorkOrderPage() {
               
               <div className="space-y-2">
                 <Label className="text-[10px] font-black text-slate-500 uppercase tracking-wider">Target Asset <span className="text-red-500">*</span></Label>
-                <Select onValueChange={setSelectedAssetId} value={selectedAssetId}>
+                <Select onValueChange={(val) => setSelectedAssetId(val || "")} value={selectedAssetId}>
                   <SelectTrigger className="border-slate-200 focus:ring-pelni-blue/20">
                     <SelectValue placeholder="Select asset to maintain" />
                   </SelectTrigger>

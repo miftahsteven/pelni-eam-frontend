@@ -41,6 +41,7 @@ export interface DisposalRequest {
   assetStatus: string;
   disposalType: DisposalType;
   condition: string;
+  reason?: string;
   sourceModule?: string;
   movementRef?: string;
   maintenanceRef?: string;

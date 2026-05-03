@@ -27,7 +27,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/components/ui/eam-checkbox";
 import { Badge } from "@/components/ui/badge";
 import { 
   Save, 
@@ -108,7 +108,7 @@ export default function CreateAssetRegistrationPage() {
             </div>
             <div className="space-y-1.5">
               <Label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Acceptance Test Reference</Label>
-              <Select onValueChange={setSelectedAT} value={selectedAT}>
+              <Select onValueChange={(val) => setSelectedAT(val || "")} value={selectedAT}>
                 <SelectTrigger className="border-slate-200 focus:ring-pelni-blue/20">
                   <SelectValue placeholder="Select Acceptance Test" />
                 </SelectTrigger>

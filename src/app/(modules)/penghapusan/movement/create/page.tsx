@@ -79,7 +79,7 @@ export default function CreateMovementPage() {
               
               <div className="border-t border-slate-100 pt-6">
                 <Label className="text-xs font-bold text-slate-700 mb-2 block">Select Asset <span className="text-red-500">*</span></Label>
-                <Select value={selectedAssetCode} onValueChange={handleAssetSelect}>
+                <Select value={selectedAssetCode} onValueChange={(val) => handleAssetSelect(val || "")}>
                   <SelectTrigger className={cn("border-slate-200 h-10", !selectedAssetCode && "text-slate-400")}>
                     <SelectValue placeholder="Search and select asset by code or name..." />
                   </SelectTrigger>

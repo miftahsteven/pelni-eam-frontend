@@ -8,6 +8,8 @@ export interface DummyAsset {
   vessel: string;
 }
 
+export type MaintenanceStatus = "Open" | "Assigned" | "In Progress" | "Completed" | "Closed" | "Cancelled";
+
 export interface DummyWorkOrder {
   id: string;
   assetCode: string;
@@ -16,7 +18,7 @@ export interface DummyWorkOrder {
   priority: string;
   technician: string[];
   scheduleDate: string;
-  status: string;
+  status: MaintenanceStatus;
   location: string;
   vessel: string;
   description: string;

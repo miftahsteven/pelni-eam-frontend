@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { disposalRequests } from "../../disposal-data";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 export default function DisposalCertificatePage() {
@@ -151,11 +152,4 @@ export default function DisposalCertificatePage() {
   );
 }
 
-// Simple Helper for Card in certificate context to avoid extra imports
-function Card({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div className={cn("bg-white", className)} {...props}>
-      {children}
-    </div>
-  )
-}
+

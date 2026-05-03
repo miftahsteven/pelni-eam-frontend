@@ -8,18 +8,20 @@ import { WBSAssignmentStatus, WBSMasterStatus } from "@/lib/mocks/wbs-assignment
 import { cn } from "@/lib/utils"
 
 interface StatusBadgeProps {
-  status: PlanningStatus | BoQStatus | PRStatus | DeliveryOrderStatus | DOItemStatus | PurchaseOrderStatus | POItemStatus | WBSAssignmentStatus | WBSMasterStatus
+  status: PlanningStatus | BoQStatus | PRStatus | DeliveryOrderStatus | DOItemStatus | PurchaseOrderStatus | POItemStatus | WBSAssignmentStatus | WBSMasterStatus | "Draft" | "Registered" | "Open" | "Assigned" | "In Progress" | "Completed" | "Review" | "Approved"
   className?: string
 }
 
 export function StatusBadge({ status, className }: StatusBadgeProps) {
-  const getStatusColor = (status: PlanningStatus | BoQStatus | PRStatus | DeliveryOrderStatus | DOItemStatus | PurchaseOrderStatus | POItemStatus | WBSAssignmentStatus | WBSMasterStatus) => {
+  const getStatusColor = (status: PlanningStatus | BoQStatus | PRStatus | DeliveryOrderStatus | DOItemStatus | PurchaseOrderStatus | POItemStatus | WBSAssignmentStatus | WBSMasterStatus | "Draft" | "Registered" | "Open" | "Assigned" | "In Progress" | "Completed" | "Review" | "Approved") => {
     switch (status) {
       case "Waiting Assignment":
       case "Waiting Assignment Review":
       case "Waiting PO Approval":
       case "Waiting Arrival":
       case "Under Verification":
+      case "Assigned":
+      case "Review":
         return "bg-amber-50 text-amber-700 border-amber-200"
       case "Partially Assigned":
       case "Partially Fulfilled":
@@ -27,6 +29,7 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       case "Partially Accepted":
       case "Short Delivery":
       case "Short Delivered":
+      case "In Progress":
         return "bg-cyan-50 text-cyan-700 border-cyan-200"
       case "Fully Assigned":
       case "Ready for PO":
@@ -40,6 +43,9 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       case "Delivered":
       case "Ready for GR":
       case "Ready for Service Confirmation":
+      case "Registered":
+      case "Completed":
+      case "Approved":
         return "bg-emerald-50 text-emerald-700 border-emerald-200"
       case "Need Revision":
       case "Revision Required":
@@ -50,6 +56,9 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       case "Closed":
       case "Inactive":
         return "bg-red-50 text-red-700 border-red-200"
+      case "Draft":
+      case "Open":
+        return "bg-slate-50 text-slate-600 border-slate-200"
       default:
         return "bg-slate-50 text-slate-600 border-slate-200"
     }

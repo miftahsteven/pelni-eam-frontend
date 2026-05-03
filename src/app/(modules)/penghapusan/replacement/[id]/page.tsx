@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { ModuleHeader } from "@/components/module-header";
-import { Button } from "@/components/ui/badge"; // Note: badge import used accidentally for Button name in detail? No, use UI button.
 import { Button as UIButton } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
