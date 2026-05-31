@@ -59,17 +59,17 @@ const items = [
     url: "/dashboard",
     icon: LayoutDashboard,
   },
-  // {
-  //   title: "Asset Management",
-  //   icon: Anchor,
-  //   items: [
-  //     {
-  //       title: "Asset Inventory",
-  //       url: "/asset",
-  //       icon: ClipboardList,
-  //     },
-  //   ],
-  // },
+  {
+    title: "Asset Management",
+    icon: Anchor,
+    items: [
+      {
+        title: "Asset Inventory",
+        url: "/asset",
+        icon: ClipboardList,
+      },
+    ],
+  },
   {
     title: "Perencanaan",
     icon: ClipboardList,
@@ -180,42 +180,42 @@ const items = [
       }
     ]
   },
-  {
-    title: "Invoices",
-    icon: FileText,
-    items: [
-      {
-        title: "Dashboard",
-        url: "/invoices",
-        icon: LayoutDashboard,
-      },
-      {
-        title: "Vendor Invoice",
-        url: "/invoices/list",
-        icon: FileText,
-      },
-      {
-        title: "Invoice Matching",
-        url: "/invoices/matching",
-        icon: FileCheck,
-      },
-      {
-        title: "Approval Queue",
-        url: "/invoices/approval",
-        icon: ClipboardCheck,
-      },
-      {
-        title: "Payment Monitoring",
-        url: "/invoices/payments",
-        icon: CreditCard,
-      },
-      {
-        title: "Cost Allocation",
-        url: "/invoices/allocation",
-        icon: TrendingUp,
-      },
-    ]
-  },
+  // {
+  //   title: "Invoices",
+  //   icon: FileText,
+  //   items: [
+  //     {
+  //       title: "Dashboard",
+  //       url: "/invoices",
+  //       icon: LayoutDashboard,
+  //     },
+  //     {
+  //       title: "Vendor Invoice",
+  //       url: "/invoices/list",
+  //       icon: FileText,
+  //     },
+  //     {
+  //       title: "Invoice Matching",
+  //       url: "/invoices/matching",
+  //       icon: FileCheck,
+  //     },
+  //     {
+  //       title: "Approval Queue",
+  //       url: "/invoices/approval",
+  //       icon: ClipboardCheck,
+  //     },
+  //     {
+  //       title: "Payment Monitoring",
+  //       url: "/invoices/payments",
+  //       icon: CreditCard,
+  //     },
+  //     {
+  //       title: "Cost Allocation",
+  //       url: "/invoices/allocation",
+  //       icon: TrendingUp,
+  //     },
+  //   ]
+  // },
   {
     title: "Master Data",
     icon: Settings,
@@ -266,26 +266,10 @@ export function AppSidebar() {
 
   return (
     <Sidebar variant="sidebar" collapsible="icon" className="border-r-0">
-      <SidebarHeader className="border-b border-white/5 bg-gradient-to-b from-[#1e2d63] to-pelni-blue px-6 py-8 text-white">
-        <div className="flex items-center gap-4">
-          <div className="relative group">
-            <div className="absolute -inset-2 bg-pelni-sky/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative bg-white p-2.5 rounded-xl shadow-2xl shadow-black/20 flex items-center justify-center ring-1 ring-white/10">
-              <img src="/pelni_logo.png" alt="logo-pelni" className="h-10 w-auto object-contain" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-0.5">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-black tracking-tighter leading-none">
-                EAM
-              </span>
-              <span className="bg-pelni-sky/20 text-pelni-sky text-[9px] px-1.5 py-0.5 rounded-full font-bold tracking-widest uppercase border border-pelni-sky/30">
-                v2
-              </span>
-            </div>
-            <p className="text-[10px] font-semibold text-white/40 uppercase tracking-[0.2em] whitespace-nowrap">
-              PELNI Assets
-            </p>
+      <SidebarHeader className="border-b border-slate-200 bg-slate-50 px-6 py-6">
+        <div className="flex items-center justify-center w-full">
+          <div className="relative group w-full flex justify-center">
+            <img src="/pelni_logo.png" alt="logo-pelni" className="w-[160px] h-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105" />
           </div>
         </div>
       </SidebarHeader>
